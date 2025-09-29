@@ -11,12 +11,12 @@ st.set_page_config(
 
 # Sidebar para configurar el negocio
 st.sidebar.header("⚙️ Configuración del Negocio")
-business_name = st.sidebar.text_input("Nombre del negocio:", "BigDogs")
+business_name = st.sidebar.selectbox("Nombre del negocio:", ["BigDogs"])
 
 # Título principal
 st.title(f"🤖 Chatbot Demo - {business_name}")
-conversation_number = str(uuid4())
-info = InfoService(business_name, conversation_number)
+st.session_state.conversation_number = str(uuid4())
+info = InfoService(business_name, st.session_state.conversation_number)
 
 # Inicializar el chat
 if "messages" not in st.session_state:
