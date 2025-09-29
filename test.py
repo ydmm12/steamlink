@@ -42,7 +42,7 @@ if prompt := st.chat_input("Escribe tu mensaje aquí..."):
             # try:
                 
                 
-                print("Conversation ID:",st.session_state.info.conversation)
+                print("Conversation ID:",st.session_state.info.conversation_id)
                 print("History", st.session_state.info.history)
                 response = st.session_state.info.handle_conversation(prompt)
                 
