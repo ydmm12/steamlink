@@ -1,4 +1,4 @@
-import main as st
+import test as st
 from service.info import InfoService
 from uuid import uuid4
 
