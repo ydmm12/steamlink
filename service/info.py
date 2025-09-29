@@ -19,6 +19,6 @@ class InfoService:
 
     
     def handle_conversation(self, message):
-        self.hisotry = self.sender.send_request(message, self.hisotry)
+        self.history = self.sender.send_request(message, self.history)
         conversations[self.conversation] = self.history
         return conversations[self.conversation][-1]["content"]
