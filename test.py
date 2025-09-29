@@ -39,7 +39,7 @@ if prompt := st.chat_input("Escribe tu mensaje aquí..."):
     # Generar respuesta
     with st.chat_message("assistant"):
         with st.spinner("Pensando..."):
-            try:
+            # try:
                 
                 
                 print("Conversation ID:",st.session_state.info.conversation)
@@ -54,10 +54,10 @@ if prompt := st.chat_input("Escribe tu mensaje aquí..."):
                 st.markdown(bot_response)
                 st.session_state.messages.append({"role": "assistant", "content": bot_response})
                 
-            except Exception as e:
-                error_msg = "Disculpa, estoy teniendo problemas técnicos. Por favor intenta más tarde."
-                st.markdown(error_msg)
-                st.session_state.messages.append({"role": "assistant", "content": error_msg})
+            # except Exception as e:
+            #     error_msg = "Disculpa, estoy teniendo problemas técnicos. Por favor intenta más tarde."
+            #     st.markdown(error_msg)
+            #     st.session_state.messages.append({"role": "assistant", "content": error_msg})
 
 # Botón para limpiar chat
 if st.sidebar.button("🗑️ Limpiar conversación"):
