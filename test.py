@@ -15,7 +15,6 @@ business_name = st.sidebar.text_input("Nombre del negocio:", "BigDogs")
 
 # Título principal
 st.title(f"🤖 Chatbot Demo - {business_name}")
-st.markdown(f"*Asistente virtual inteligente para {business_type.lower()}*")
 conversation_number = str(uuid4())
 info = InfoService(business_name, conversation_number)
 
