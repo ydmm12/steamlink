@@ -1,4 +1,4 @@
-import test as st
+import streamlit as st
 from service.info import InfoService
 from uuid import uuid4
 
