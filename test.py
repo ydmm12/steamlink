@@ -16,7 +16,7 @@ business_name = st.sidebar.selectbox("Nombre del negocio:", ["BigDogs"])
 # Título principal
 st.title(f"🤖 Chatbot Demo - {business_name}")
 st.session_state.conversation_number = str(uuid4())
-info = InfoService(business_name, st.session_state.conversation_number)
+st.session_state.info = InfoService(business_name, st.session_state.conversation_number)
 
 # Inicializar el chat
 if "messages" not in st.session_state:
@@ -43,7 +43,7 @@ if prompt := st.chat_input("Escribe tu mensaje aquí..."):
                 
                 
                 
-                response = info.handle_conversation(prompt)
+                response = st.session_state.info.handle_conversation(prompt)
                 
                 if response:
                     bot_response = response
